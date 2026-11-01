@@ -1,0 +1,1 @@
+Put official YCM photography and cover art here. The album feature loads assets/tidings-cover.jpg if that file exists; otherwise it displays a typographic fallback.

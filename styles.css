@@ -14,7 +14,7 @@
   --cream:#eee8db;
   --ink:#23241e;
   --muted:#60645b;
-  --gold:#f0c44b;
+  --gold:#fcb306;
   --rust:#af6952;
   --green:#5b6c60;
   --line:#d8d3c6;
@@ -160,3 +160,82 @@ h1,h2,h3,.wordmark,.footer-logo,.project-art-word {font-family:var(--font-ui)}
   .post-copy h3{font-size:34px}
 }
 @media(prefers-reduced-motion:reduce){.post-link:hover .post-media,.post-link:hover .post-media img{transform:none}}
+
+
+/* ==========================================================
+   YCM BRAND FIX / NOVEMBER 2026
+   Official brand yellow + real couch mark paired with type.
+   Both --gold declarations above are #fcb306.
+   ========================================================== */
+:root { --gold: #fcb306; }
+
+.wordmark,
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.wordmark { min-width: 0; }
+.wordmark-logo {
+  display: block;
+  height: 64px;
+  width: auto;
+  max-width: 128px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.brand-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 0.96;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.brand-wordmark strong {
+  font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.075em;
+}
+.brand-wordmark em {
+  margin-top: 2px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+}
+.footer-logo img { height: 66px; width: auto; max-width: 132px; }
+.footer-logo .brand-wordmark strong { font-size: 26px; }
+.footer-logo .brand-wordmark em { font-size: 39px; }
+/* Gold visual accents should use the brand yellow rather than old gold shades. */
+.about-symbol { color: var(--gold); }
+.marquee-bar { border-color: #c68c00; }
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .wordmark-logo { height: 54px; max-width: 106px; }
+  .brand-wordmark strong { font-size: 19px; }
+  .brand-wordmark em { font-size: 29px; }
+  .site-header { gap: 14px; }
+}
+@media (max-width: 760px) {
+  .wordmark { gap: 9px; }
+  .wordmark-logo { height: 48px; max-width: 96px; }
+  .brand-wordmark strong { font-size: 18px; }
+  .brand-wordmark em { font-size: 25px; }
+  .footer-logo img { height: 56px; max-width: 112px; }
+  .footer-logo .brand-wordmark strong { font-size: 22px; }
+  .footer-logo .brand-wordmark em { font-size: 32px; }
+  /* Keep the story header uncluttered at narrow widths. */
+  .post-nav a:not(:first-child) { display: none; }
+}
+@media (max-width: 420px) {
+  .wordmark-logo { height: 40px; max-width: 82px; }
+  .brand-wordmark strong { font-size: 16px; }
+  .brand-wordmark em { font-size: 22px; }
+  .wordmark { gap: 8px; }
+}
